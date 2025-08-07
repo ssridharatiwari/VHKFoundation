@@ -17,13 +17,9 @@ import com.vhkfoundation.commonutility.PreferenceConnector;
 import com.vhkfoundation.commonutility.ShowCustomToast;
 import com.vhkfoundation.commonutility.customfont.FontUtils;
 import com.vhkfoundation.databinding.ActVolunteerBinding;
-import com.vhkfoundation.retrofit.ApiInterface;
 import com.vhkfoundation.retrofit.WebServiceListenerRetroFit;
-import com.vhkfoundation.retrofit.WebServiceRetroFit;
 
 import org.json.JSONException;
-import org.json.JSONObject;
-import java.util.LinkedList;
 
 public class ActivityAddVolunteer extends AppCompatActivity implements WebServiceListenerRetroFit {
     private Context svContext;
@@ -89,11 +85,6 @@ public class ActivityAddVolunteer extends AppCompatActivity implements WebServic
         }
     }
 
-    private void callWebService(String postUrl, LinkedList<String> lstUploadData, boolean isDialogShow) {
-        WebServiceRetroFit webService = new WebServiceRetroFit(svContext, postUrl, lstUploadData, this, isDialogShow);
-        webService.LoadDataRetrofit(webService.callReturn());
-    }
-
     private void loadToolBar() {
         binding.layActionbar.llBack.setOnClickListener(view -> finish());
         binding.layActionbar.tvTitle.setText("Add Volunteer");
@@ -101,15 +92,7 @@ public class ActivityAddVolunteer extends AppCompatActivity implements WebServic
 
     @Override
     public void onWebServiceRetroActionComplete(String result, String url) throws JSONException {
-        JSONObject json = null;
-        if (url.contains(ApiInterface.UPDATEUSERDETAILS)) {
-            try {
-                json = new JSONObject(result);
-            } catch (JSONException e) {
-                customToast.showCustomToast(svContext, "Some error occured", customToast.ToastyError);
-                e.printStackTrace();
-            }
-        }
+
     }
 
     @Override
