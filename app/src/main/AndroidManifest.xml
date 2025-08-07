@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/new_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/new_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VHKFoundation"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".activity.SlideImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActivitySplash"
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivityLogin"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.ActivityForgotPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.ActivityRegister"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.ActivityMain"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityCategoryList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivitySubCategoryList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityActivitiesList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityEditProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityChangePassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityDonationHistory"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityActivitiesDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityBrowseProfileImage"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".activity.ActivityNotification"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".activity.ActivityDonate"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".activity.ActivityAddVolunteer"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".activity.ActivityRefer"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".activity.ActivityCreatePost"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".activity.ActivityEvent"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityEventDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityEmergencyList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityFeedsDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityFeedsList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityCatWiseDonationList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ActivityDonationDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VHKFoundation"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/lay_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_back"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_centerVertical="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_back_arrow"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/img_dash_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:layout_toStartOf="@+id/lay_actions"
+                android:layout_toEndOf="@+id/ll_back"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                >
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_170"
+                    android:layout_height="wrap_content"
+                    android:text="Codunite"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/dp_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_actions"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_toStartOf="@+id/img_notification"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_2">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/img_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toStartOf="@+id/ll_user_image"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_2">
+
+                <ImageView
+                    android:id="@+id/iv_notification"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_30"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_notification" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_user_image"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/circle_profile_image"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_2">
+
+                <ImageView
+                    android:id="@+id/iv_user"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_35"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_profile_image" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</layout>
+

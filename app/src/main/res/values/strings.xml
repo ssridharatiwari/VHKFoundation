@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "VHK Foundation"><!ENTITY package "com.vhkfoundation">]>
+<resources>
+
+    <string name="app_name" translatable="false">VHK Foundation</string>
+    <string name="file_provider_authority" translatable="false">&package;.provider</string>
+    <string name="label_ok" translatable="false">Ok</string>
+    <string name="label_cancel" translatable="false">Cancel</string>
+    <string name="nonterworkconn" translatable="false">No network connection. Connect to the \ninternet and try again</string>
+    <string name="nointernet" translatable="false">No Internet connection</string>
+
+    <string name="permission_title_rationale" translatable="false">Permission needed</string>
+    <string name="permission_read_storage_rationale" translatable="false">Storage read permission is needed to pick files.</string>
+    <string name="permission_write_storage_rationale" translatable="false">Storage write permission is needed to save the image.</string>
+    <string name="permission_read_contacts_rationale" translatable="false">Read contacts permission is needed to fetch contacts.</string>
+
+    <string name="toast_cannot_retrieve_selected_image" translatable="false">Cannot retrieve selected image</string>
+    <string name="toast_cannot_retrieve_cropped_image" translatable="false">Cannot retrieve cropped image</string>
+    <string name="toast_unexpected_error" translatable="false">Unexpected error</string>
+
+    <string name="documents_kyc" translatable="false">Note: Image size should be 2MB and only .jpg.png format allowed.</string>
+    <string name="skip_now" translatable="false"><u>Skip Now</u></string>
+    <string name="share" translatable="false">Now start earning by refer this app to your friens and family member.</string>
+    <string name="welcome_back">WelCome Back</string>
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="enter_your_email_id_member_id_mobile">Enter Your Email Id/Member Id/Mobile</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_an_account">Don\'t Have An Account?</string>
+    <string name="enter_your_phone">Enter Your Phone</string>
+    <string name="have_already_an_account">Have Already An Account?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_confirm_password">Enter Confirm Password</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="enter_your_aadhaar_number">Enter Your Aadhaar Number</string>
+
+
+</resources>

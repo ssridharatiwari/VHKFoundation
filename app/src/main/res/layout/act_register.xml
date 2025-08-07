@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/headlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/peach_cream"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_back"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/circle_back"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_back_arrow">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_150"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:src="@drawable/new_logo" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rl_top"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginEnd="-5dp"
+                android:background="@drawable/background_img"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/bg_line">
+
+                </View>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_40">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_welComeBackText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:layout_marginBottom="@dimen/dp_5"
+                                android:text="Get Started Now"
+                                android:textColor="@color/chocolateColor"
+                                android:textSize="@dimen/sp_24"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/tv_loginToAcText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp_5"
+                                android:text="Create Your Account"
+                                android:textColor="@color/chocolateColor"
+                                android:textSize="@dimen/sp_16"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_welComeBackText" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:layout_marginRight="@dimen/dp_20"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="Enter Your Name"
+                                    android:textColor="@color/chocolateColor"
+                                    android:textSize="@dimen/sp_14"
+                                    android:textStyle="bold" />
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+
+
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/enter_mail_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/et_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_50"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Enter Your Name"
+                                        android:inputType="text"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <include
+                                        layout="@layout/include_connection"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/dp_20"
+                                        tools:layout_editor_absoluteX="-16dp"
+                                        tools:layout_editor_absoluteY="-347dp" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:layout_marginBottom="@dimen/dp_5"
+                                    android:text="Enter Your Email Id"
+                                    android:textColor="@color/chocolateColor"
+                                    android:textSize="@dimen/sp_14"
+                                    android:textStyle="bold" />
+
+                                <!--<RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:background="@drawable/bg_edittext">
+
+                                    <ImageView
+                                        android:id="@+id/img_email"
+                                        android:layout_width="@dimen/dp_25"
+                                        android:layout_height="@dimen/dp_20"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/dp_10"
+                                        android:src="@drawable/ic_email"></ImageView>
+
+                                    <EditText
+                                        android:id="@+id/et_email"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@+id/img_email"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Enter Your Email Id"
+                                        android:inputType="text"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14" />
+
+                                </RelativeLayout>-->
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+
+
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/main_bg_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/et_email"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_50"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Enter Your Email Id"
+                                        android:inputType="text"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="@string/enter_your_phone"
+                                    android:textColor="@color/chocolateColor"
+                                    android:textSize="@dimen/sp_14"
+                                    android:textStyle="bold" />
+
+                                <!-- <RelativeLayout
+                                     android:layout_width="match_parent"
+                                     android:layout_height="@dimen/dp_45"
+                                     android:background="@drawable/bg_edittext">
+
+                                     <ImageView
+                                         android:id="@+id/img_phone"
+                                         android:layout_width="@dimen/dp_25"
+                                         android:layout_height="@dimen/dp_20"
+                                         android:layout_centerVertical="true"
+                                         android:layout_marginLeft="@dimen/dp_10"
+                                         android:src="@drawable/ic_phone"></ImageView>
+
+                                     <EditText
+                                         android:id="@+id/et_phone"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="@dimen/dp_40"
+                                         android:layout_centerVertical="true"
+                                         android:layout_toRightOf="@+id/img_phone"
+                                         android:background="@android:color/transparent"
+                                         android:hint="Enter Your Phone"
+                                         android:inputType="number"
+                                         android:paddingLeft="@dimen/dp_10"
+                                         android:paddingRight="@dimen/dp_10"
+                                         android:singleLine="true"
+                                         android:maxLength="10"
+                                         android:textColor="@color/black"
+                                         android:textColorHint="@color/gray"
+                                         android:textSize="@dimen/sp_14" />
+
+                                 </RelativeLayout>-->
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/phone_background_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/et_phone"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_50"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Enter Your Phone"
+                                        android:inputType="number"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:maxLength="10"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </LinearLayout>
+
+                            <!-- aadhar field-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="@string/enter_your_aadhaar_number"
+                                    android:textColor="@color/chocolateColor"
+                                    android:textSize="@dimen/sp_14"
+                                    android:textStyle="bold" />
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/phone_background_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/et_aa"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_50"
+                                        android:layout_marginEnd="@dimen/dp_50"
+                                        android:background="@android:color/transparent"
+                                        android:hint="@string/enter_your_aadhaar_number"
+                                        android:inputType="number"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:maxLength="12"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <ImageView
+                                        android:id="@+id/iv_verify_aadhaar"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginEnd="@dimen/dp_10"
+                                        android:src="@drawable/verify_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </LinearLayout>
+
+                            <!-- Pan field-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="Enter Your Pan Number"
+                                    android:textColor="@color/chocolateColor"
+                                    android:textSize="@dimen/sp_14"
+                                    android:textStyle="bold" />
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/phone_background_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/et_pan"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_50"
+                                        android:layout_marginEnd="@dimen/dp_50"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Enter Your Pan Number"
+                                        android:inputType="text"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:maxLength="10"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <ImageView
+                                        android:id="@+id/iv_verify_pan"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginEnd="@dimen/dp_10"
+                                        android:src="@drawable/verify_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </LinearLayout>
+
+                            <!--first password -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="Enter Your Password"
+                                    android:textColor="@color/chocolateColor"
+                                    android:textSize="@dimen/sp_14"
+                                    android:textStyle="bold" />
+
+                                <!--<RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:background="@drawable/bg_edittext">
+
+                                    <ImageView
+                                        android:id="@+id/img_password"
+                                        android:layout_width="@dimen/dp_25"
+                                        android:layout_height="@dimen/dp_20"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/dp_10"
+                                        android:src="@drawable/ic_password"></ImageView>
+
+                                    <EditText
+                                        android:layout_toRightOf="@+id/img_password"
+                                        android:layout_toLeftOf="@+id/iv_eye"
+                                        android:id="@+id/et_password"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Password"
+                                        android:inputType="textPassword"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14" />
+
+                                    <ImageView
+                                        android:layout_alignParentRight="true"
+                                        android:id="@+id/iv_eye"
+                                        android:layout_width="@dimen/dp_20"
+                                        android:layout_height="@dimen/dp_20"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="@dimen/dp_10"
+                                        android:src="@drawable/ic_password_close"
+                                        app:tint="@color/orange"></ImageView>
+
+
+                                </RelativeLayout>-->
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/password_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/et_password"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_50"
+                                        android:layout_marginEnd="@dimen/dp_50"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Password"
+                                        android:inputType="textPassword"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_eye"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginEnd="@dimen/dp_10"
+                                        android:src="@drawable/eye_hide_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <!--first password -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="Re-enter Your Password"
+                                    android:textColor="@color/chocolateColor"
+                                    android:textSize="@dimen/sp_14"
+                                    android:textStyle="bold" />
+
+                                <!--<RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:background="@drawable/bg_edittext">
+
+                                    <ImageView
+                                        android:id="@+id/img_password"
+                                        android:layout_width="@dimen/dp_25"
+                                        android:layout_height="@dimen/dp_20"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/dp_10"
+                                        android:src="@drawable/ic_password"></ImageView>
+
+                                    <EditText
+                                        android:layout_toRightOf="@+id/img_password"
+                                        android:layout_toLeftOf="@+id/iv_eye"
+                                        android:id="@+id/et_password"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Password"
+                                        android:inputType="textPassword"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14" />
+
+                                    <ImageView
+                                        android:layout_alignParentRight="true"
+                                        android:id="@+id/iv_eye"
+                                        android:layout_width="@dimen/dp_20"
+                                        android:layout_height="@dimen/dp_20"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="@dimen/dp_10"
+                                        android:src="@drawable/ic_password_close"
+                                        app:tint="@color/orange"></ImageView>
+
+
+                                </RelativeLayout>-->
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/password_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/et_password2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_50"
+                                        android:layout_marginEnd="@dimen/dp_50"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Password"
+                                        android:inputType="textPassword"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_eye2"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginEnd="@dimen/dp_10"
+                                        android:src="@drawable/eye_hide_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/tv_referralText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dp_5"
+                                        android:text="Do You have  Referral Code?"
+                                        android:textColor="@color/chocolateColor"
+                                        android:textSize="@dimen/sp_14"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <RadioGroup
+                                        android:id="@+id/rg_ref"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="10dp"
+                                        android:orientation="horizontal"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toRightOf="@+id/tv_referralText"
+                                        app:layout_constraintRight_toRightOf="parent"
+
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <RadioButton
+                                            android:id="@+id/rb_yed"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:buttonTint="@color/chocolateColor"
+                                            android:padding="4dp"
+                                            android:text="Yes"
+                                            android:checked="false"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/chocolateColor"
+                                            android:textSize="@dimen/sp_15" />
+
+                                        <!--adding a radio button -->
+                                        <RadioButton
+                                            android:id="@+id/rb_no"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="@dimen/dp_5"
+                                            android:buttonTint="@color/chocolateColor"
+                                            android:padding="4dp"
+                                            android:checked="true"
+                                            android:text="No"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/chocolateColor"
+                                            android:textSize="@dimen/sp_15" />
+
+                                    </RadioGroup>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_ref"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="Enter Your Referral ID"
+                                    android:textColor="@color/chocolateColor"
+                                    android:textSize="@dimen/sp_14"
+                                    android:textStyle="bold" />
+
+                                <!-- <RelativeLayout
+                                     android:layout_width="match_parent"
+                                     android:layout_height="@dimen/dp_45"
+                                     android:background="@drawable/bg_edittext">
+
+                                     <ImageView
+                                         android:id="@+id/img_ref_user"
+                                         android:layout_width="@dimen/dp_25"
+                                         android:layout_height="@dimen/dp_20"
+                                         android:layout_centerVertical="true"
+                                         android:layout_marginLeft="@dimen/dp_10"
+                                         android:src="@drawable/ic_refferal_user"></ImageView>
+
+                                     <EditText
+                                         android:id="@+id/et_ref_code"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="@dimen/dp_40"
+                                         android:layout_centerVertical="true"
+                                         android:layout_toRightOf="@+id/img_ref_user"
+                                         android:background="@android:color/transparent"
+                                         android:hint="Enter Your Referral ID"
+                                         android:inputType="text"
+                                         android:paddingLeft="@dimen/dp_10"
+                                         android:paddingRight="@dimen/dp_10"
+                                         android:singleLine="true"
+                                         android:textColor="@color/black"
+                                         android:textColorHint="@color/gray"
+                                         android:textSize="@dimen/sp_14" />
+
+                                 </RelativeLayout>-->
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/referral_bg_img"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/et_ref_code"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_50"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Enter Your Referral ID"
+                                        android:inputType="text"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_10"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/sp_14"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/btn_sign_up"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_50"
+                                android:layout_marginTop="@dimen/dp_40"
+                                android:layout_gravity="center"
+                                android:src="@drawable/signup_btn_img" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:layout_marginBottom="@dimen/dp_20"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="@string/have_already_an_account"
+                                    android:textColor="@color/chocolateColor"
+                                    android:textSize="@dimen/sp_14" />
+
+                                <TextView
+                                    android:id="@+id/tv_sign_in"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="@string/sign_in"
+                                    android:textColor="@color/chocolateColor"
+                                    android:textSize="@dimen/sp_18"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

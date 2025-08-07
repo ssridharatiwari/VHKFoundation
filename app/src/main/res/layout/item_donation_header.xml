@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_5">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arrival Reminder"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold">
+        </TextView>
+
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_view_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/sp_13"
+            android:layout_gravity="end"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/dp_10"
+            android:textStyle="bold">
+        </TextView>
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_donate_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_donation_list" />
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

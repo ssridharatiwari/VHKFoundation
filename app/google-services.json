@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "656226437669",
+    "project_id": "morningpay-16b25",
+    "storage_bucket": "morningpay-16b25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656226437669:android:bfa63b08feb20b92aecdcc",
+        "android_client_info": {
+          "package_name": "com.vhkfoundation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656226437669-6q0i3rf5rufbslp6e0v9eirjntmpft41.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vhkfoundation",
+            "certificate_hash": "db90694e77a64e645afaf1e3d0ccd92d7170a5cc"
+          }
+        },
+        {
+          "client_id": "656226437669-950assa0k5vng8pr76lm09s5ogfod3sv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vhkfoundation",
+            "certificate_hash": "4773505694b5b9f8ae005b2d27a1f1950fbbb4f2"
+          }
+        },
+        {
+          "client_id": "656226437669-jh948jlkh59hdmmv8hnv2obe292ntp03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmiV3Qm6B4oz-1NeWIzXjHE-1l11Xg5ls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656226437669-jh948jlkh59hdmmv8hnv2obe292ntp03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

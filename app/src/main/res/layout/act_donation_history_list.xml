@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/headlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_form"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/lay_actionbar"
+            layout="@layout/include_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_20" />
+
+    </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_60"
+            android:layout_marginRight="@dimen/dp_20"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:text="Category : "
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@drawable/bg_edittext">
+
+                <Spinner
+                    android:id="@+id/spinner_eventCatList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_25"
+                    tools:listitem="@layout/item_spinner" />
+
+                <ImageView
+                    android:id="@+id/img_drop_1"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:src="@drawable/ic_arrow_drop"
+                    app:tint="@color/orange" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_below="@+id/rl_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_90"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_activities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_donation_history" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/include_connection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_20" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+</layout>

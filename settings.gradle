@@ -1,0 +1,3 @@
+rootProject.name = "VHK Foundation"
+include ':app'
+include ':tedbottompicker'

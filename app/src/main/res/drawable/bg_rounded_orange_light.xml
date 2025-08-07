@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple  xmlns:android="http://schemas.android.com/apk/res/android"
+     android:color="@color/light_orange">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/light_orange"
+                android:centerColor="@color/light_orange"
+                android:endColor="@color/light_orange"
+                android:angle="270" />
+            <corners android:radius="@dimen/dp_10"/>
+        </shape>
+    </item>
+</ripple >
+
+
+
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:shape="rectangle">-->
+<!--    <corners android:radius="8dp" />-->
+<!--    &lt;!&ndash;  Gradient Bg for listrow &ndash;&gt;-->
+<!--    <gradient-->
+<!--        android:startColor="#CF1212"-->
+<!--        android:centerColor="#C41111"-->
+<!--        android:endColor="#840B0B"-->
+<!--        android:angle="270" />-->
+<!--</shape>-->
