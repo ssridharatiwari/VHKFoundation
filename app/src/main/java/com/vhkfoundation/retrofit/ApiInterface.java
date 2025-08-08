@@ -16,19 +16,13 @@ import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
-
-   // String LOGINAUTH = "userAuth";
-
     String LOGINAUTH = "login";
-  //  String REGISTRATIONAUTH = "registerationAuth";
     String REGISTRATIONAUTH = "sign-up";
     String UPDATEBASICDETAIL = "updateBasicDetail";
     String PERSONALDETAIL = "personalDetail";
     String FAMILYDETAIL = "familyDetail";
-    String OccuPationDetails = "occupationDetails";
     String BankDetails = "bankDetails";
     String KycDetails = "kycDetails";
-
     String CHANGEPASSWORDAUTH = "updatePasswordAuth";
     String GETUSERDETAILS = "getUserDetails";
     String GETDONATIONPOSTLIST = "getDonationPostList";
