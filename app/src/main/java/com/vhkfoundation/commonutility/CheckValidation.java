@@ -92,15 +92,13 @@ public class CheckValidation {
     }
 
     public static boolean urlValidate(String url) {
+        if (url == null || url.isEmpty()) {
+            return false;
+        }
         String expression = ".*(youtube|youtu.be).*";
         Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(url);
-        if (matcher.matches()) {
-            return true;
-        } else if (url.equals("")) {
-            return false;
-        }
-        return false;
+        return matcher.matches();
     }
 
     public static String getEditTextValue(EditText text) {
