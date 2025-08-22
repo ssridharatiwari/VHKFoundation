@@ -143,9 +143,19 @@ public class ActivityChangePassword extends AppCompatActivity implements WebServ
     private void updatePassword(){
         int response = 0;
         response = CheckValidation.emptyEditTextError(edTexts, edTextsError);
-        if (!getEditextValue(et_new_password).equals(getEditextValue(et_confirm_password))) {
-            response++;
-            customToast.showCustomToast(svContext, "Password not matching", customToast.ToastyError);
+        if (response == 0) {
+            if (!CheckValidation.isPasswordValid(getEditextValue(et_new_password))) {
+                response++;
+                et_new_password.setError("Password must be 8-20 characters and include letters and numbers");
+            }
+            if (!CheckValidation.isPasswordValid(getEditextValue(et_confirm_password))) {
+                response++;
+                et_confirm_password.setError("Password must be 8-20 characters and include letters and numbers");
+            }
+            if (!getEditextValue(et_new_password).equals(getEditextValue(et_confirm_password))) {
+                response++;
+                customToast.showCustomToast(svContext, "Password not matching", customToast.ToastyError);
+            }
         }
         if (response == 0) {
             lstUploadData = new LinkedList<>();

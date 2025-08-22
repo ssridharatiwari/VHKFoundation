@@ -171,11 +171,21 @@ public class ActivityRegister extends AppCompatActivity implements WebServiceLis
                         "Enter Your Name", "Enter Your Email Id","Enter Your Phone","Enter Your Password","Enter Your Password"
                 });
 
-        if (!(binding.etPassword.getText().equals(binding.etPassword2.getText()))){
-            binding.etPassword.setError("Enter Same Password");
-            binding.etPassword2.setError("Enter Same Password");
+        if (response == 0) {
+            if (!CheckValidation.isPasswordValid(getEditextValue(et_password))) {
+                response++;
+                et_password.setError("Password must be 8-20 characters and include letters and numbers");
+            }
+            if (!CheckValidation.isPasswordValid(getEditextValue(et_password2))) {
+                response++;
+                et_password2.setError("Password must be 8-20 characters and include letters and numbers");
+            }
+            if (!binding.etPassword.getText().toString().equals(binding.etPassword2.getText().toString())){
+                response++;
+                binding.etPassword.setError("Enter Same Password");
+                binding.etPassword2.setError("Enter Same Password");
+            }
         }
-
 
         if(response==0){
             if(strReferral.equalsIgnoreCase("Yes")){

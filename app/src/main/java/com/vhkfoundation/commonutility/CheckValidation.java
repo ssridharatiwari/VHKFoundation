@@ -106,24 +106,24 @@ public class CheckValidation {
     }
 
     public static boolean isPasswordLengthCorrect(EditText text) {
-        if (text.getText() != null && text.getText().toString().trim().length() >= 8) {
-            return true;
-        } else {
-            return false;
+        if (text.getText() != null) {
+            int length = text.getText().toString().trim().length();
+            return length >= 8 && length <= 20;
         }
+        return false;
     }
 
+    /**
+     * Validate password to ensure it is 8-20 characters long and contains both
+     * letters and numbers.
+     */
     public static boolean isPasswordValid(String number) {
-        //String regexStr = "^([0-9\\(\\)\\/\\+ \\-]*)$";
-        String regexStr = " (?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,20})$";
-
-        if (number.length() < 6 || number.length() > 13 /*|| number.matches(regexStr) == false*/) {
-            //	Log.d("tag", "Number is not valid");
+        String regexStr = "^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9]{8,20}$";
+        if (number == null || number.length() < 8 || number.length() > 20 || !number.matches(regexStr)) {
             return false;
         }
         return true;
     }
-
     public static long currentTimeInMillis() {
         Time time = new Time();
         time.setToNow();
