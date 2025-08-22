@@ -1,7 +1,6 @@
 package com.vhkfoundation.activity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.InputType;
@@ -11,24 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatCheckBox;
 
 import com.vhkfoundation.R;
-import com.vhkfoundation.commonutility.CheckInternet;
 import com.vhkfoundation.commonutility.CheckValidation;
 import com.vhkfoundation.commonutility.GlobalVariables;
-import com.vhkfoundation.commonutility.NoInternetScreen;
 import com.vhkfoundation.commonutility.ShowCustomToast;
 import com.vhkfoundation.commonutility.customfont.FontUtils;
-import com.vhkfoundation.databinding.ActLoginBinding;
 import com.vhkfoundation.databinding.ActRegisterBinding;
 import com.vhkfoundation.retrofit.ApiInterface;
 import com.vhkfoundation.retrofit.WebServiceListenerRetroFit;
@@ -42,12 +32,7 @@ import java.util.LinkedList;
 
 public class ActivityRegister extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
-    LinearLayout ll_back;
     EditText et_name,et_email,et_phone,et_password,et_password2;
-    TextView tv_sign_in;
-    AppCompatCheckBox cb_remember;
-    AppCompatButton btn_sign_up;
-    ImageView iv_eye;
     String strReferral="No";
 
     private EditText[] edTexts = {et_name, et_email,et_phone,et_password,et_password2};
@@ -64,7 +49,6 @@ public class ActivityRegister extends BaseActivity implements WebServiceListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.act_login);
         binding = ActRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         OnClickCombineDeclare(allViewWithClickId);
@@ -73,14 +57,15 @@ public class ActivityRegister extends BaseActivity implements WebServiceListener
     }
 
 
+    /**
+     * Attach a single click listener to a group of view IDs to reduce boilerplate.
+     */
     private void OnClickCombineDeclare(int[] allViewWithClick) {
         for (int j = 0; j < allViewWithClick.length; j++) {
             (findViewById(allViewWithClickId[j])).setOnClickListener(v -> {
-                Intent svIntent = null;
                 switch (v.getId()) {
 
                     case R.id.btn_sign_up:
-                        //Toast.makeText(getApplicationContext(),"Login",Toast.LENGTH_LONG).show();
                         hideKeyboard();
                         SignUpStart();
 
@@ -139,7 +124,6 @@ public class ActivityRegister extends BaseActivity implements WebServiceListener
             Typeface font = Typeface.createFromAsset(getAssets(), GlobalVariables.CUSTOMFONTNAME);
             FontUtils.setFont(root, font);
         }
-        //hideKeyboard();
         resumeApp();
     }
     public void resumeApp() {
@@ -156,12 +140,14 @@ public class ActivityRegister extends BaseActivity implements WebServiceListener
                     strReferral = "No";
                     binding.llRef.setVisibility(View.GONE);
                 }
-                //Toast.makeText(ActivityLogin.this, "Selected Radio Button is : " + strLoginType, Toast.LENGTH_SHORT).show();
             }
         });
 
     }
 
+    /**
+     * Validate user inputs and trigger the sign-up web service.
+     */
     private void SignUpStart() {
         int response = 0;
         response = CheckValidation.emptyEditTextError(
@@ -257,35 +243,15 @@ public class ActivityRegister extends BaseActivity implements WebServiceListener
 
             try {
                 Log.d(TAG, "Parsed JSON: " + json.toString());
-
-                // Check if required fields exist in the JSON
-                /*if (!json.has("message") || !json.has("status")) {
-                    Log.e(TAG, "Missing required fields in response");
-                    customToast.showCustomToast(svContext, "Invalid response format", customToast.ToastyError);
-                    return;
-                }*/
-
-              /*  String str_message = json.getString("message");
-                String str_status = json.getString("status");*/
                 String token = json.getString("token");
-              //  Log.d(TAG, "Message: " + str_message + ", Status: " + str_status);
 
                 if (token.isEmpty()) {
                     Log.e(TAG, "token is null");
                     customToast.showCustomToast(svContext, "token is null", customToast.ToastyError);
                     return;
                 }
-
-               // if (str_status.equalsIgnoreCase("1")) {
-                //Log.d(TAG, "Registration successful");
-                    customToast.showCustomToast(svContext, "Please Login", customToast.ToastySuccess);
-                    finish();
-               /* } else {
-                    Log.d(TAG, "Registration failed");
-                    customToast.showCustomToast(svContext,
-                            str_message != null ? str_message : "Operation failed",
-                            customToast.ToastyError);
-                }*/
+                customToast.showCustomToast(svContext, "Please Login", customToast.ToastySuccess);
+                finish();
             } catch (JSONException e) {
                 Log.e(TAG, "JSON parsing error: " + e.getMessage(), e);
 
