@@ -34,7 +34,6 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.ContextCompat;
@@ -83,7 +82,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ActivityEditProfile extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivityEditProfile extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
     private ShowCustomToast customToast;
 

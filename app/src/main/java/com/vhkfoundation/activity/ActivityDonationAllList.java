@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,7 +31,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class ActivityDonationAllList extends AppCompatActivity {
+public class ActivityDonationAllList extends BaseActivity {
     private Context svContext;
     LinearLayout ll_back;
     RecyclerView rv_notifiction;

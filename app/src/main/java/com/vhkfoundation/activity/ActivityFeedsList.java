@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,7 +40,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ActivityFeedsList extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivityFeedsList extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
     private ShowCustomToast customToast;
 

@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.vhkfoundation.R;
@@ -31,7 +30,7 @@ import org.json.JSONObject;
 
 import java.util.LinkedList;
 
-public class ActivityProfile extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivityProfile extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
     private ShowCustomToast customToast;
 

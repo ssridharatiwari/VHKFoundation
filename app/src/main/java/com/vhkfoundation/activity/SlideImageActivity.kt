@@ -3,13 +3,15 @@ package com.vhkfoundation.activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import androidx.appcompat.app.AppCompatActivity
+
 import com.smarteist.autoimageslider.SliderView
 import com.vhkfoundation.R
 import com.vhkfoundation.adapter.SliderAdapter2
 import com.vhkfoundation.model.SliderData
 
-class SlideImageActivity : AppCompatActivity() {
+import com.vhkfoundation.activity.BaseActivity
+
+class SlideImageActivity : BaseActivity() {
 
     private lateinit var sliderView: SliderView
     private val sliderDataArrayList = listOf(

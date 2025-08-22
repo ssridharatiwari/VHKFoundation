@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.android.material.tabs.TabLayout;
@@ -33,7 +32,7 @@ import org.json.JSONObject;
 
 import java.util.LinkedList;
 
-public class ActivityEditProfileCopy extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivityEditProfileCopy extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
     private ShowCustomToast customToast;
 

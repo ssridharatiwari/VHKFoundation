@@ -5,14 +5,13 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.vhkfoundation.R;
 import com.vhkfoundation.commonutility.GlobalVariables;
 import com.vhkfoundation.commonutility.customfont.FontUtils;
 import com.vhkfoundation.databinding.ActActivityDetailsBinding;
 
-public class ActivityActivitiesDetails extends AppCompatActivity {
+public class ActivityActivitiesDetails extends BaseActivity {
     private ActActivityDetailsBinding binding;
 
     @Override

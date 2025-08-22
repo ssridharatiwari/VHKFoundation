@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
 
 import com.vhkfoundation.R;
@@ -21,7 +20,7 @@ import com.vhkfoundation.retrofit.WebServiceListenerRetroFit;
 
 import org.json.JSONException;
 
-public class ActivityAddVolunteer extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivityAddVolunteer extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
     private ShowCustomToast customToast;
     private EditText et_name, et_mail, et_phone, et_address, et_pincode;
