@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.vhkfoundation.R;
@@ -50,7 +49,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ActivityCreatePost extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivityCreatePost extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
     private ShowCustomToast customToast;
     private EditText et_title, et_desc;

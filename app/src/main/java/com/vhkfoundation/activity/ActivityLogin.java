@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.vhkfoundation.R;
 import com.vhkfoundation.commonutility.CheckValidation;
@@ -29,7 +28,7 @@ import org.json.JSONObject;
 import java.util.LinkedList;
 
 
-public class ActivityLogin extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivityLogin extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
     EditText et_login_id, et_password;
     private final EditText[] edTexts = {et_login_id, et_password};

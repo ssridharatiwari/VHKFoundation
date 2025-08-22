@@ -9,7 +9,6 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.vhkfoundation.R;
 import com.vhkfoundation.commonutility.CheckInternet;
@@ -21,7 +20,7 @@ import com.vhkfoundation.commonutility.customfont.FontUtils;
 import com.vhkfoundation.databinding.ActDonateBinding;
 import com.vhkfoundation.databinding.ActEditProfileBinding;
 
-public class ActivityDonate extends AppCompatActivity {
+public class ActivityDonate extends BaseActivity {
     private Context svContext;
     private ShowCustomToast customToast;
     private ActDonateBinding binding;

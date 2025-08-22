@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -27,7 +26,7 @@ import com.vhkfoundation.model.EmergencyHelpModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityCategoryList extends AppCompatActivity {
+public class ActivityCategoryList extends BaseActivity {
     private Context svContext;
     private ShowCustomToast customToast;
     private ActCategoryListBinding binding;

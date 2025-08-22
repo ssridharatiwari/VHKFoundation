@@ -6,7 +6,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -22,7 +21,7 @@ import com.vhkfoundation.model.FeedsModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityActivitiesList extends AppCompatActivity {
+public class ActivityActivitiesList extends BaseActivity {
     private Context svContext;
     private ActActivitiesListBinding binding;
 

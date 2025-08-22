@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -53,7 +52,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ActivityEmergencyList extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivityEmergencyList extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
     private ShowCustomToast customToast;
 

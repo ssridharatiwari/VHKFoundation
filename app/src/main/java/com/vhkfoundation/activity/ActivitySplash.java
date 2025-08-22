@@ -13,7 +13,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 import com.vhkfoundation.R;
@@ -33,7 +32,7 @@ import org.json.JSONObject;
 import java.util.LinkedList;
 
 
-public class ActivitySplash extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivitySplash extends BaseActivity implements WebServiceListenerRetroFit {
     private FrameLayout frame_layout;
     public static final String TAG_MESSAGE = "message";
     public static final String TAG_STATUS = "status";

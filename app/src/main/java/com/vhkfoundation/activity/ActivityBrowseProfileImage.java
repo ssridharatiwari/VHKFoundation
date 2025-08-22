@@ -1,4 +1,5 @@
 package com.vhkfoundation.activity;
+import android.app.Activity;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -36,7 +37,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -63,7 +63,7 @@ import java.util.List;
 
 import gun0912.tedbottompicker.TedBottomPicker;
 
-public class ActivityBrowseProfileImage extends AppCompatActivity implements View.OnClickListener,
+public class ActivityBrowseProfileImage extends BaseActivity implements View.OnClickListener,
         UCropFragmentCallback {
     private Context svContext;
     public static Uri imageUri = null;
@@ -215,7 +215,7 @@ public class ActivityBrowseProfileImage extends AppCompatActivity implements Vie
     ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
-                if (result.getResultCode() == AppCompatActivity.RESULT_OK) {
+                if (result.getResultCode() == Activity.RESULT_OK) {
                     TedBottomPicker.with(ActivityBrowseProfileImage.this)
                             //.setPeekHeight(getResources().getDisplayMetrics().heightPixels/2)
                             //.setSelectedUri(imageUri)

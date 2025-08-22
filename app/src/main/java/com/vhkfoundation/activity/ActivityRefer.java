@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.vhkfoundation.R;
 import com.vhkfoundation.commonutility.CheckInternet;
@@ -17,7 +16,7 @@ import com.vhkfoundation.commonutility.customfont.FontUtils;
 import com.vhkfoundation.databinding.ActDonateBinding;
 import com.vhkfoundation.databinding.ActReferBinding;
 
-public class ActivityRefer extends AppCompatActivity {
+public class ActivityRefer extends BaseActivity {
     private Context svContext;
     private ShowCustomToast customToast;
 

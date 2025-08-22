@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.vhkfoundation.R;
 import com.vhkfoundation.adapter.CatWiseDonationListAdapter;
@@ -29,7 +28,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ActivityCatWiseDonationList extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivityCatWiseDonationList extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
     private ShowCustomToast customToast;
     private ActCatWiseDonationListBinding binding;

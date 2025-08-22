@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.vhkfoundation.R;
@@ -21,7 +20,7 @@ import com.vhkfoundation.model.ActivityModel;
 
 import java.util.List;
 
-public class ActivityEventDetails extends AppCompatActivity {
+public class ActivityEventDetails extends BaseActivity {
     private Context svContext;
     private ShowCustomToast customToast;
 

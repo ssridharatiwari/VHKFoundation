@@ -18,7 +18,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 
@@ -41,7 +40,7 @@ import org.json.JSONObject;
 import java.util.LinkedList;
 
 
-public class ActivityRegister extends AppCompatActivity implements WebServiceListenerRetroFit {
+public class ActivityRegister extends BaseActivity implements WebServiceListenerRetroFit {
     private Context svContext;
     LinearLayout ll_back;
     EditText et_name,et_email,et_phone,et_password,et_password2;

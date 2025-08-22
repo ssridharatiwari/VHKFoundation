@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
@@ -38,7 +37,7 @@ import com.vhkfoundation.model.MenuModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnItemSelectedListener {
+public class ActivityMain extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnItemSelectedListener {
 
     private Context svContext;
     private ShowCustomToast customToast;

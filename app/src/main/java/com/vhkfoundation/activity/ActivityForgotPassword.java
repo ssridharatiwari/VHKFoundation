@@ -13,7 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 
@@ -28,7 +27,7 @@ import com.vhkfoundation.databinding.ActForgotPasswordBinding;
 import com.vhkfoundation.databinding.ActLoginBinding;
 
 
-public class ActivityForgotPassword extends AppCompatActivity {
+public class ActivityForgotPassword extends BaseActivity {
     private Context svContext;
     LinearLayout ll_login;
     EditText et_email,et_code,et_new_password,et_confirm_password;
