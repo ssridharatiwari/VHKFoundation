@@ -61,7 +61,7 @@ public class PreferenceConnector {
     }
 
     public static void writeFloat(Context context, String key, float value) {
-        getEditor(context).putFloat(decrypt(key), value).commit();
+        getEditor(context).putFloat(encrypt(key), value).commit();
     }
 
     public static float readFloat(Context context, String key, float defValue) {
@@ -69,7 +69,7 @@ public class PreferenceConnector {
     }
 
     public static void writeLong(Context context, String key, long value) {
-        getEditor(context).putLong(decrypt(key), value).commit();
+        getEditor(context).putLong(encrypt(key), value).commit();
     }
 
     public static long readLong(Context context, String key, long defValue) {
